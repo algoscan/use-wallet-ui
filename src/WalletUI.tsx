@@ -22,8 +22,7 @@ const ActiveIcon = () => (
 )
 
 export function useWalletUI(){
-	const { activeAddress, signTransactions } = useWallet();
-	return({activeAddress, signTransactions})	
+	return useWallet();
 }
 
 export default function WalletUI({primary, textColor, backgroundColor} : { primary?: string, textColor?: string, backgroundColor?: string }) {
