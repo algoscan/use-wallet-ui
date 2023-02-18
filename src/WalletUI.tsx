@@ -26,8 +26,8 @@ export function useWalletUI(){
 	return({...props})	
 }
 
-export default function WalletUI({primary, textColor, backgroundColor} : { primary?: string, textColor?: string, backgroundColor?: string }) {
-	const [open, setOpen] = useState(false)
+export default function WalletUI({primary, textColor, backgroundColor, openState} : { primary?: string, textColor?: string, backgroundColor?: string, openState: boolean}) {
+	const [open, setOpen] = useState(openState ?? false )
 	const { providers, activeAccount } = useWallet()
 
 	return (
